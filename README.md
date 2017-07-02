@@ -9,3 +9,4 @@ Otherwise, if actual project data should be used, this can be done by following 
 
 RNASeqExpressionBrowser--a web interface to browse and visualize high-throughput expression data.
 Nussbaumer T1, Kugler KG1, Bader KC1, Sharma S1, Seidel M1, Mayer KF1.
+<a href='https://www.ncbi.nlm.nih.gov/pubmed/24833805'>RNASeqExpressionBrowser</a>
