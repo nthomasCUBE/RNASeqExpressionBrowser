@@ -1,0 +1,123 @@
+<hr>
+
+<h1>Updates for the RNASeqExpressionBrowser</h1>
+<p style="background:#FFFF99;border=3">
+2014, December 20<br>
+The tool was installed using our latest version (1.21)
+You can find the version from the time of publication under following URL <a href="../barley/index.cgi">RNASeqExpressionBrowser OLD (1.0)</a>. We included several new features as: comment function, more different coloring shades, sequences export among other features.<br>
+<br>
+<b>References</b>:
+Thomas Nussbaumer, Karl G. Kugler, Kai C. Bader, Sapna Sharma, Michael Seidel, and Klaus F.X. Mayer. <a style="color:red; font-weight:bold;text-decoration:underline;" href="http://bioinformatics.oxfordjournals.org/content/early/2014/06/15/bioinformatics.btu334">RNASeqExpressionBrowser - A web interface to browse and visualize high-throughput expression data</a>. , Bioinformatics, 2014.<br>
+<br>
+We integrated expression data from the <a href="http://www.ncbi.nlm.nih.gov/pubmed/23075845">Barley genome paper</a>. A description of underyling data resources you can find below.
+<br>
+</p>
+<p><b> Plant material and sequence reads from RNAseq </b></p>
+
+<table border="1">
+<tr>
+   <td>Tissue abbreviation</td>
+   <td>Tissue description</td>
+</tr>
+
+
+<tr>
+   <td> EMB </td>
+   <td> 4-day embryos dissected from germinating grains </td>
+</tr>
+
+<tr>
+   <td> ROO </td>
+   <td> Roots from the seedlings (10 cm shoot stage) </td>
+</tr>
+
+<tr>
+   <td> LEA </td>
+   <td> Shoots from the seedlings (10 cm shoot stage) </td>
+</tr>
+
+<tr>
+   <td> INF1 </td>
+   <td> Young developing inflorescences (5mm) </td>
+</tr>
+
+
+<tr>
+   <td> INF2 </td>
+   <td> Developing inflorescences (1-1.5 cm) </td>
+</tr>
+
+
+<tr>
+   <td> NOD </td>
+   <td> Developing tillers at six-leaf stage, 3rd internode  </td>
+</tr>
+
+
+<tr>
+   <td> CAR5
+   <td> Developing grain, bracts removed (5 DPA)
+</tr>
+
+
+<tr>
+   <td> CAR15 </td>
+   <td> Developing grain, bracts removed (15 DPA) </td>
+</tr>
+</table>
+
+<br><b> In detail description for respective experiments: </b></br>
+
+
+<p align="left|justify">
+<b>Tissue sampling</b>
+Approximately 400 barley cv. Morex seeds were surface sterilized in 1% (v/v) bleach solution
+for 20 minutes, followed by extensive rinsing with tap water. Seeds were subdivided in three
+parts-one was used for germination on the plates to obtain EMB samples, the next was used
+to plant in the pots with perlite (for LEA and ROO samples), and the remaining in the pots
+with compost to grow plants for INF, NOD and CAR tissues. Tissue sampling was always
+performed between 10 and 11 am. All sampled tissues were flash frozen in liquid nitrogen
+and put in-80 degree freezer for RNA extraction. In total, 8 barley tissues were prepared for RNA
+-seq (Figure S13, Table S20)as follows:
+</p>
+
+<p>
+<b>EMB:</b> In total 20 sterilized seeds were spread across three stacked sheets of wet filter paper
+and covered with three sheets of wet filter paper in the large 23x23 cm square petri dishes.
+Petri dishes were wrapped in foil and placed in the same glasshouse area where seeds were
+planted. After four days of germination, embryonic tissue (coleoptile, mesocotyl and seminal
+roots) from nine similarly looking germinating seeds were dissected.
+</p>
+
+<p>
+<b>LEA, ROO:</b> Sampling of the LEA and ROO tissue was made when upper parts of the plants
+grown in pots with perlite reached c. 10 cm length (17 days after planting). Plants were
+carefully removed from the pots, remains of the perlite were washed away, and roots and
+shoots were separated by cutting just below and above the root/shoot junction. Remains of
+the embryo were not sampled. Roots and shoots from four plants were used per sampling.
+</p>
+
+<p>
+<b>INF1, INF2:</b> The main tillers of c. 30 day old plants were used to dissect developing
+inflorescences (INF1). Only those inflorescences that were about 5 mm long were collected
+for RNA extraction. In total, 15-20 inflorescences were dissected per sample. For obtaining
+10-15 mm long inflorescences, main tillers from c. 50 day old plants were used.
+</p>
+
+<p>
+<b>NOD:</b> The third internode (4-6 cm long) was dissected from 42 days old plants. Leaf blades
+and sheaths were removed, and the internode was cut out from just below the 4th and just
+above the 3rd nodes.
+</p>
+
+<p>
+<b>CAR5, CAR15:</b> To obtain developing caryopses (CAR), anthesis time was determined using
+c. 60 day old plants by removing anthers from the central florets at the centre of the spike
+and examining their colour and determining whether they have shed. Spikes
+with yellow anthers, but not shedding, were marked and examined subsequently for shedding to set the
+anthesis time. Five days after anthesis, 3-5 mm long caryopses (CAR5) were dissected from
+the central florets of the central spike. Fifteen caryopses were collected per sample. Ten
+days later, c. 10 mm caryopses were dissected from spikes to obtain CAR15 samples.
+</p>
+
+
