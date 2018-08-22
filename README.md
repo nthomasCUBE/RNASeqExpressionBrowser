@@ -22,6 +22,10 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-gr
 also don't forget to grant permissions:
 GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
 
+python2-mysql might be needed eventually:
+yum install python2-mysql
+
+
 A) Goatools installation
 should work with
 'pip install goatools'
