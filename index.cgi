@@ -77,10 +77,11 @@ for line in fh.readlines():
 		if(vals[1].find("GO:")!=-1):
 			gos[vals[1]]=1
 for gos_ in gos:
-	gos2[gos_]=1
-	CC=p[gos_].get_all_parents()
-	for CC_ in CC:
-		gos2[CC_]=1
+	if(p.get(gos_)!=None):
+		gos2[gos_]=1
+		CC=p[gos_].get_all_parents()
+		for CC_ in CC:
+			gos2[CC_]=1
 for gos_ in gos2:
 	c_t=gos_+" "+str(p[gos_].name)
         print "\""+c_t+"\",",
