@@ -19,6 +19,8 @@ someone can access the database where the data is stored:
 e.g. CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 You can find a good tutorial over here: 
 https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
+also don't forget to grant permissions:
+GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
 
 A) Goatools installation
 should work with
