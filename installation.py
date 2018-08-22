@@ -640,13 +640,15 @@ def extract_go(map_GO,dom,obo_file):
 	                        	gos[vals[1]]=1
 		for gos_ in gos:
 			gos2[gos_]=1
-			CC=p[gos_].get_all_parents()
-			for CC_ in CC:
-				gos2[CC_]=1
+			if(p.get(gos_)!=None):
+				CC=p[gos_].get_all_parents()
+				for CC_ in CC:
+					gos2[CC_]=1
 		for gos_ in gos2:
-		        CC=p[gos_].get_all_children()
-			if(len(CC)>0):
-			        fw.write(gos_+"\t"+string.join(CC,";")+"\n")
+			if(p.get(gos_)!=None):
+			        CC=p[gos_].get_all_children()
+				if(len(CC)>0):
+				        fw.write(gos_+"\t"+string.join(CC,";")+"\n")
 		fw.close()
 	except Exception:
 		print "ERROR","Python module goatools is missing"
