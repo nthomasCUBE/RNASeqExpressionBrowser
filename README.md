@@ -13,6 +13,13 @@ work if the root would permit writing permission to the /var/www/cgi-bin folder 
 0) installation of mysql, good tutorial over here:
 https://www.wikihow.com/Install-MySQL-on-Fedora
 
+When MySQL is installed, you need to give a user and password, so that
+someone can access the database where the data is stored:
+
+e.g. CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+You can find a good tutorial over here: 
+https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
+
 A) Goatools installation
 should work with
 'pip install goatools'
@@ -26,12 +33,6 @@ unzip gene_ontology.1_2.zip
 
 B) Installation of the tool
 python installation.py installation_example.conf
-
-
-
-
-
-
 
 
 # Citation
