@@ -4,6 +4,19 @@ We prepared a script "installation_demo.sh" in order to generate a demo example 
 Otherwise, if actual project data should be used, this can be done by following the command
 "python installation.py installation_example.conf" and modifying the textfile "installation_example.conf"
 
+# Docker configuration (ongoing, not finished yet)
+
+It is necessary to install docker using e.g. yum in fedora.
+
+the script creates then a directory during the installation process, where the docker
+can be started then with 
+
+docker run -d -p 8082:80 rnaseqexpressionbrowser
+
+where the website can be then displayed using 
+
+http://localhost:8082/test.html
+
 
 # Installation process
 
