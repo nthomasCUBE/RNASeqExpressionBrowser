@@ -38,29 +38,40 @@ https://www.wikihow.com/Install-MySQL-on-Fedora
 When MySQL is installed, you need to give a user and password, so that
 someone can access the database where the data is stored:
 
-e.g. CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+```
+CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+```
 You can find a good tutorial over here: 
 https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
 also don't forget to grant permissions:
+```
 GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+```
 
 python2-mysql might be needed eventually:
+```
 yum install python2-mysql
-
+```
 
 A) Goatools installation
 should work with
+```
 'pip install goatools'
+```
 
 B) GO tools obo file
 Can be obtained over here:
 http://www.geneontology.org/page/download-ontology
 or using the the default version under go
+```
 cd go
 unzip gene_ontology.1_2.zip
+```
 
 B) Installation of the tool
+```
 python installation.py installation_example.conf
+```
 
 
 # Citation
