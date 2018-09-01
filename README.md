@@ -1,3 +1,4 @@
+
 # RNASeqExpressionBrowser
 
 We prepared a script "installation_demo.sh" in order to generate a demo example of installation of RNASeqExpressionBrowser.
@@ -10,6 +11,21 @@ It is necessary to install docker using e.g. yum in fedora.
 
 The Dockerfile can be found in the current release but will need some time to have everything ready for
 use in Docker.
+
+```
+#!/usr/bin/bash
+
+service docker stop
+service docker start
+
+cd abc2
+docker build -t abc2 .
+docker run -d -p 8082:80 abc2
+```
+
+The code was modified from [Apache-with-python]{https://github.com/eriston/Apache-with-python-cgi-Docker/blob/master/Dockerfile}. Great thanks to Michał T. Lorenc for the suggestion of using the tool in Docker and for providing this code.
+Before, installation and configuration was rather difficult, now with Docker much easier to configure the tool.
+
 
 # Installation process
 
