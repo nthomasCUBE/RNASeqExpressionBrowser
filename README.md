@@ -1,4 +1,9 @@
 
+In my case, the tool can be then visualized using 
+```
+http://localhost:8082/index.cgi
+```
+
 # RNASeqExpressionBrowser
 
 We prepared a script "installation_demo.sh" in order to generate a demo example of installation of RNASeqExpressionBrowser.
