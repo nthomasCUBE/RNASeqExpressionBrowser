@@ -1,9 +1,3 @@
-
-In my case, the tool can be then visualized using 
-```
-http://localhost:8082/index.cgi
-```
-
 # RNASeqExpressionBrowser
 
 We prepared a script "installation_demo.sh" in order to generate a demo example of installation of RNASeqExpressionBrowser.
@@ -31,6 +25,10 @@ docker run -d -p 8082:80 abc2
 The code was modified from [Apache-with-python]{https://github.com/eriston/Apache-with-python-cgi-Docker/blob/master/Dockerfile}. Great thanks to Michał T. Lorenc for the suggestion of using the tool in Docker and for providing this code.
 Before, installation and configuration was rather difficult, now with Docker much easier to configure the tool.
 
+In my case, the tool can be then visualized using 
+```
+http://localhost:8082/index.cgi
+```
 
 # Installation process
 
