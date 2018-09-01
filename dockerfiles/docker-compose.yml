@@ -1,0 +1,36 @@
+version: '2'
+services:
+  expressionbrowser:
+      build: .
+      restart: always
+      ports:
+          - "8003:80"
+      depends_on:
+          - expressionbrowserdb
+      volumes:
+          - ./data/:/db
+
+  expressionbrowserdb:
+    image: mariadb
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_password
+      - MYSQL_DATABASE=db
+      - MYSQL_USER=my_user
+      - MYSQL_PASSWORD=my_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/:/docker-entrypoint-initdb.d
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    depends_on:
+      - expressionbrowserdb
+    ports:
+      - 8182:80
+    environment:
+      PMA_USER: my_root
+      PMA_PASSWORD: my_admin
+      PMA_ARBITRARY: 1
