@@ -1,36 +1,34 @@
-version: '2'
-services:
-  expressionbrowser:
-      build: .
-      restart: always
-      ports:
-          - "8003:80"
-      depends_on:
-          - expressionbrowserdb
-      volumes:
-          - ./data/:/db
+FROM php:7.0-apache
 
-  expressionbrowserdb:
-    image: mariadb
-    restart: always
-    environment:
-      - MYSQL_ROOT_PASSWORD=admin
-      - MYSQL_DATABASE=db
-      - MYSQL_USER=myuser
-      - MYSQL_PASSWORD=mypassword
-    ports:
-      - "3306:3306"
-    volumes:
-      - ./mysql/:/docker-entrypoint-initdb.d
+EXPOSE 80
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    restart: always
-    depends_on:
-      - expressionbrowserdb
-    ports:
-      - 8182:80
-    environment:
-      PMA_USER: root
-      PMA_PASSWORD: admin
-      PMA_ARBITRARY: 1
+RUN apt-get update
+RUN apt-get -y install apache2
+RUN apt-get -y install python python-mysqldb
+RUN apt-get -y install python-pil python-matplotlib python-scipy python-sklearn
+RUN docker-php-ext-install mysqli
+
+#load apache cgi module
+RUN a2enmod cgi
+RUN service apache2 restart
+
+#enable cgi in the website root
+#second block to allow .htaccess
+RUN echo "                       \n \
+<Directory /var/www/html>        \n \
+   Options +ExecCGI              \n \
+   AddHandler cgi-script .cgi     \n \
+   DirectoryIndex index.cgi       \n \
+</Directory>                     \n \
+" >> /etc/apache2/apache2.conf
+
+RUN chmod -R u+rwx,g+x,o+x /var/www/html
+RUN ln -sf /usr/bin/python /usr/local/bin/python
+
+CMD /usr/sbin/apache2ctl -D FOREGROUN
+
+COPY src/*cgi /var/www/html/
+RUN chmod -R u+rwx,g+x,o+x /var/www/html/
+RUN ln -sf /usr/bin/python /usr/local/bin/python
+CMD /usr/sbin/apache2ctl -D FOREGROUND
+RUN ln -sf /proc/$$/fd/1 /var/log/test.log
