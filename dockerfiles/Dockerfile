@@ -25,7 +25,7 @@ RUN echo "                       \n \
 RUN chmod -R u+rwx,g+x,o+x /var/www/html
 RUN ln -sf /usr/bin/python /usr/local/bin/python
 
-CMD /usr/sbin/apache2ctl -D FOREGROUN
+CMD /usr/sbin/apache2ctl -D FOREGROUND
 
 COPY src/*cgi /var/www/html/
 RUN chmod -R u+rwx,g+x,o+x /var/www/html/
